@@ -19,16 +19,15 @@ class Notice(models.Model):
     file = models.FileField(upload_to='documents/')
     created_at = models.DateTimeField(auto_now=True)
 
+
     def __str__(self):
         return self.title
-
 
 
 class AdvertisementTypes(models.TextChoices):
     VERTICAL = 'vertical',
     HORIZONTAL = 'horizontal',
     SQUARE = 'square',
-
 
 
 class Advertisement(models.Model):
